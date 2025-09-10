@@ -352,12 +352,13 @@ function App() {
                 {/* Input Area */}
                 <div className="border-t border-orange-200 p-6">
                   <div className="flex space-x-3">
-                    <Textarea
+                    <textarea
                       value={inputMessage}
                       onChange={(e) => setInputMessage(e.target.value)}
-                      onKeyPress={handleKeyPress}
+                      onKeyDown={handleKeyPress}
                       placeholder="Ask me about travel plans, destinations, budgets, or anything travel-related..."
-                      className="flex-1 min-h-[50px] border-orange-200 focus:border-orange-400 resize-none"
+                      className="flex-1 min-h-[50px] p-3 border border-orange-200 focus:border-orange-400 resize-none rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50"
+                      rows="2"
                     />
                     <Button
                       onClick={sendMessage}
